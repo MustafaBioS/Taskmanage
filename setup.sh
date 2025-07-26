@@ -5,4 +5,4 @@ git pull
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-gunicorn -b ":$PORT" DJANGO.wsgi:application
+DJANGO_SETTINGS_MODULE=DJANGO.settings gunicorn -b ":$PORT" DJANGO.wsgi:application
