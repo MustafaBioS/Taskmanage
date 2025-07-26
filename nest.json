@@ -1,5 +1,4 @@
 {
   "start": "DJANGO_SETTINGS_MODULE=DJANGO.settings gunicorn DJANGO.wsgi:application --bind unix:/home/mustafahany2/pub/DJANGO/.webserver.sock",
-  "watch": ["*.py", "**/*.py"],
-  "build": "pip install -r requirements.txt"
+  "port": 8080
 }
