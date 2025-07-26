@@ -1,4 +1,4 @@
-set -e
+
 PORT="$1"
 
 
@@ -16,4 +16,4 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 export DJANGO_SETTINGS_MODULE=DJANGO.settings
-exec gunicorn -b ":$PORT" DJANGO.wsgi:application
+exec gunicorn -b "0.0.0.0:$PORT" DJANGO.wsgi:application
