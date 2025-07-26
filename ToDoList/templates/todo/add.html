@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+    {% block body %}    
+    <p class="txt-tasks" id="entertask">Enter a Task:</p>
+    <div class="bg">
+    <div class="formcontainer">
+    <form action="{% url 'add' %}" method="post">
+    {% csrf_token %}
+    {{ form.task }}
+    <input type="submit" class="btn">
+    </form>
+    </div>
+    <a href="{% url 'index' %}" class="seetasks">See Tasks</a>
+    </div>
+    {% endblock %}
+</body>
+</html>
+
+
