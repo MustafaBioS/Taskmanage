@@ -2,7 +2,10 @@ set -e
 PORT="$1"
 
 
-kill -9 $(lsof -ti ":$PORT") 2>/dev/null
+PID=$(lsof -ti ":$PORT")
+if [ -n "$PID" ]; then
+  kill -9 "$PID"
+fi
 
 git pull
 
@@ -13,4 +16,4 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 export DJANGO_SETTINGS_MODULE=DJANGO.settings
-gunicorn -b ":$PORT" DJANGO.wsgi:application
+exec gunicorn -b ":$PORT" DJANGO.wsgi:application
