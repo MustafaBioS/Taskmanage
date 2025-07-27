@@ -114,8 +114,7 @@ body, html {
 
 .txt-tasks {
     position: absolute;
-    top: 100px; 
-    left: 870px;
+    transform: translateY(-350px);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 80px;
     margin: 0;
