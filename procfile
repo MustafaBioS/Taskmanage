@@ -1,1 +1,0 @@
-web: DJANGO_SETTINGS_MODULE=DJANGO.settings gunicorn DJANGO.wsgi:application --bind 0.0.0.0:$PORT
