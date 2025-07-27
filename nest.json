@@ -1,4 +1,0 @@
-{
-  "start": "DJANGO_SETTINGS_MODULE=DJANGO.settings gunicorn DJANGO.wsgi:application --bind unix:/home/mustafahany2/pub/DJANGO/.webserver.sock",
-  "port": 8080
-}
