@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(pm$t@s+-_%g++q0bctf+uur^gr_x*bs36mxcbrcsh0toj+x@d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["taskmanage.mustafahany2.hackclub.app", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
